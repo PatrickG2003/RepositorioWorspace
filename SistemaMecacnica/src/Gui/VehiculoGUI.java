@@ -18,6 +18,7 @@ import Modelo.ClienteDao;
 import javax.swing.JTable;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
+import java.awt.Frame;
 
 public class VehiculoGUI extends JPanel implements ActionListener, MouseListener {
 
@@ -59,6 +60,7 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
 	Cliente cli = new Cliente();
 	ClienteDao clidao = new ClienteDao();
 	private JTable tableListaVehiculo;
+	private JButton btnMostrarInformacion;
 
 	/**
 	 * Create the panel.
@@ -212,9 +214,23 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
 		cargarCombo();
 		tableListaVehiculo.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		ListarVehiculo();
+		
+		  btnModificarVehiculo.setEnabled(false);
+	        btnEliminarVehiculo.setEnabled(false);
+	        btnRegistrarVehiculo.setEnabled(true);
+
+	        btnMostrarInformacion = new JButton("MOSTRAR INFO");
+	        btnMostrarInformacion.addActionListener(this);
+	        btnMostrarInformacion.setBounds(333, 453, 109, 35);
+	        add(btnMostrarInformacion);
+	        btnMostrarInformacion.setEnabled(false);
+
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnMostrarInformacion) {
+			actionPerformedBtnMostrarInformacion(e);
+		}
 		if (e.getSource() == btnLimpiarVehiculo) {
 			actionPerformedBtnLimpiar(e);
 		}
@@ -230,46 +246,49 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
 	}
 
 	protected void actionPerformedBtnRegistrarVehiculo(ActionEvent e) {
-        String selectedItem = (String) cboCliente.getSelectedItem();
-        String[] partes = selectedItem.split(":");
-        int caracteresAntesDelGuion = Integer.parseInt(partes[0]);
+	    // Validar que ningún campo esté vacío
+	    if (camposVacios()) {
+	        JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
+	        return;
+	    }
+	    
+	    // Validar que la matrícula no esté repetida
+	    if (matriculaRepetida(txtPlaca.getText())) {
+	        JOptionPane.showMessageDialog(null, "La matrícula ingresada ya existe en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
+	        return;
+	    }
+	    
+	    // Obtener el cliente seleccionado
+	    String selectedItem = (String) cboCliente.getSelectedItem();
+	    String[] partes = selectedItem.split(":");
+	    int caracteresAntesDelGuion = Integer.parseInt(partes[0]);
 
-		 if (!"".equals(txtAnio.getText()) || !"".equals(txtChasis.getText()) ||
-				 !"".equals(txtCilindrada.getText()) ||
-				 !"".equals(txtColor.getText())||
-				 !"".equals(txtCombustible.getText())||
-				 !"".equals(txtKilometraje.getText())||
-				 !"".equals(txtMarca.getText())||
-				 !"".equals(txtModelo.getText()) ||
-				 !"".equals(txtMotor.getText()) ||
-				 !"".equals(txtPlaca.getText())||
-				 !"".equals(txtVin.getText())  ) {
-	            
-			 	veh.setAnio(Integer.parseInt(txtAnio.getText()));
-			 	veh.setNumeroChasis(txtChasis.getText());
-			 	veh.setCilindrada(txtCilindrada.getText());
-			 	veh.setColor(txtColor.getText());
-			 	veh.setCombustible(txtCombustible.getText());
-			 	veh.setKilometraje(Double.parseDouble(txtKilometraje.getText()));
-			 	veh.setMarca(txtMarca.getText());
-			 	veh.setModelo(txtModelo.getText());
-			 	veh.setNumeroMotor(txtMotor.getText());
-			 	veh.setPlaca(txtPlaca.getText());
-			 	veh.setVin(txtVin.getText());
-			 	veh.setCliente(caracteresAntesDelGuion);
-	            vehdao.RegistrarVehiculo(veh);
-	            JOptionPane.showMessageDialog(null, "Vehiculo Registrado");
-	            LimpiarTable();
-	            LimpiarVehiculo();
-	            ListarVehiculo();
-	            btnModificarVehiculo.setEnabled(false);
-	            btnEliminarVehiculo.setEnabled(false);
-	            btnRegistrarVehiculo.setEnabled(true);
-	        } else {
-	            JOptionPane.showMessageDialog(null, "Los campos estan vacios");
-	        }
-			
-		
+	    // Crear el objeto vehículo con los datos ingresados
+	    veh.setAnio(Integer.parseInt(txtAnio.getText()));
+	    veh.setNumeroChasis(txtChasis.getText());
+	    veh.setCilindrada(txtCilindrada.getText());
+	    veh.setColor(txtColor.getText());
+	    veh.setCombustible(txtCombustible.getText());
+	    veh.setKilometraje(Double.parseDouble(txtKilometraje.getText()));
+	    veh.setMarca(txtMarca.getText());
+	    veh.setModelo(txtModelo.getText());
+	    veh.setNumeroMotor(txtMotor.getText());
+	    veh.setPlaca(txtPlaca.getText());
+	    veh.setVin(txtVin.getText());
+	    veh.setCliente(caracteresAntesDelGuion);
+
+	    // Registrar el vehículo en la base de datos
+	    if (vehdao.RegistrarVehiculo(veh)) {
+	        JOptionPane.showMessageDialog(null, "Vehículo Registrado");
+	        LimpiarTable();
+	        LimpiarVehiculo();
+	        ListarVehiculo();
+	        btnModificarVehiculo.setEnabled(false);
+	        btnEliminarVehiculo.setEnabled(false);
+	        btnRegistrarVehiculo.setEnabled(true);
+	    } else {
+	        JOptionPane.showMessageDialog(null, "Error al registrar el vehículo.", "Error", JOptionPane.ERROR_MESSAGE);
+	    }
 	}
 
 	
@@ -326,15 +345,19 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
 
 	protected void actionPerformedBtnEliminarVehiculo(ActionEvent e) {
 		
-		  if (!"".equals(txtIdVehiculo.getText())) {
-	            int pregunta = JOptionPane.showConfirmDialog(null, "Esta seguro de eliminar");
-	            if (pregunta == 0) {
-	                int id = Integer.parseInt(txtIdVehiculo.getText());
-	                vehdao.EliminarVehiculo(id);
-	                LimpiarTable();
-	                LimpiarVehiculo();
-	                ListarVehiculo();
-	            } }
+		if (!"".equals(txtIdVehiculo.getText())) {
+		    int pregunta = JOptionPane.showConfirmDialog(null, "¿Está seguro de eliminar?");
+		    if (pregunta == 0) {
+		        int confirmacionBorrarRegistros = JOptionPane.showConfirmDialog(null, "Esta acción eliminará todos los registros relacionados con este vehículo. ¿Desea continuar?");
+		        if (confirmacionBorrarRegistros == 0) {
+		            int id = Integer.parseInt(txtIdVehiculo.getText());
+		            vehdao.EliminarVehiculo(id);
+		            LimpiarTable();
+		            LimpiarVehiculo();
+		            ListarVehiculo();
+		        }
+		    }
+		}
 	}
 
 	protected void actionPerformedBtnLimpiar(ActionEvent e) {
@@ -343,9 +366,63 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
         btnModificarVehiculo.setEnabled(false);
         btnEliminarVehiculo.setEnabled(false);
         btnRegistrarVehiculo.setEnabled(true);
-		
-	}
+        btnMostrarInformacion.setEnabled(false);
 
+	}
+	
+	public void mouseEntered(MouseEvent e) {
+	}
+	public void mouseExited(MouseEvent e) {
+	}
+	public void mousePressed(MouseEvent e) {
+	}
+	public void mouseReleased(MouseEvent e) {
+	}
+	protected void mouseClickedTableListaVehiculo(MouseEvent e) {
+		btnModificarVehiculo.setEnabled(true);
+		 btnEliminarVehiculo.setEnabled(true);
+        btnRegistrarVehiculo.setEnabled(false);
+        btnMostrarInformacion.setEnabled(true);
+
+	        int fila = tableListaVehiculo.rowAtPoint(e.getPoint());
+	       
+	    	txtIdVehiculo.setText(tableListaVehiculo.getValueAt(fila, 0).toString());
+			txtAnio.setText(tableListaVehiculo.getValueAt(fila, 8).toString());
+			txtChasis.setText(tableListaVehiculo.getValueAt(fila, 4).toString());
+			txtCilindrada.setText(tableListaVehiculo.getValueAt(fila, 9).toString());
+			txtColor.setText(tableListaVehiculo.getValueAt(fila, 7).toString());
+			txtCombustible.setText(tableListaVehiculo.getValueAt(fila, 10).toString());
+			txtKilometraje.setText(tableListaVehiculo.getValueAt(fila, 11).toString());
+			txtMarca.setText(tableListaVehiculo.getValueAt(fila, 3).toString());
+			txtModelo.setText(tableListaVehiculo.getValueAt(fila, 2).toString());
+			txtMotor.setText(tableListaVehiculo.getValueAt(fila, 5).toString());
+			txtPlaca.setText(tableListaVehiculo.getValueAt(fila, 1).toString());
+			txtVin.setText(tableListaVehiculo.getValueAt(fila, 6).toString());
+			
+			int stri = (int) tableListaVehiculo.getValueAt(fila, 12);
+			
+			 for (int i = 0; i < cboCliente.getItemCount(); i++) {
+		            String item = (String) cboCliente.getItemAt(i);
+		            if (item != null && item.contains(":")) {
+		                String[] partes = item.split(":");
+		                int numeroEnItem = Integer.parseInt(partes[0].trim());
+		                if (numeroEnItem == stri ) {
+		                    cboCliente.setSelectedIndex(i);
+		                    break;
+		                }
+		            }
+			
+			
+			 }
+			 
+	}
+	
+	
+	
+	
+	
+	
+	
 	public void cargarCombo() {
 		List<Cliente> listaClientes = clidao.ListarCliente();
 
@@ -406,47 +483,50 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
 			mouseClickedTableListaVehiculo(e);
 		}
 	}
-	public void mouseEntered(MouseEvent e) {
+	protected void actionPerformedBtnMostrarInformacion(ActionEvent e) {
+		  int filaSeleccionada = tableListaVehiculo.getSelectedRow();
+		    if (filaSeleccionada != -1) {
+		        String placa = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 1);
+		        String modelo = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 2);
+		        String marca = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 3);
+		        String chasis = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 4);
+		        String motor = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 5);
+		        String vin = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 6);
+		        String color = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 7);
+		        String anio = String.valueOf(tableListaVehiculo.getValueAt(filaSeleccionada, 8));
+		        String cilindrada = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 9);
+		        String combustible = (String) tableListaVehiculo.getValueAt(filaSeleccionada, 10);
+		        String kilometraje = String.valueOf(tableListaVehiculo.getValueAt(filaSeleccionada, 11));
+		        String cliente = String.valueOf(tableListaVehiculo.getValueAt(filaSeleccionada, 12));
+
+		        InformacionVehiculoGUI ventanaInformacion = new InformacionVehiculoGUI(placa, modelo, marca, chasis, motor, vin, color, anio, cilindrada, combustible, kilometraje, cliente);
+		        ventanaInformacion.setModal(true);
+		        ventanaInformacion.setVisible(true);
+		    } else {
+		        JOptionPane.showMessageDialog(null, "Por favor, seleccione una fila primero.");
+		    }
+		  }
+	
+	// Método para verificar si algún campo está vacío
+	private boolean camposVacios() {
+	    return txtAnio.getText().isEmpty() || txtChasis.getText().isEmpty() ||
+	            txtCilindrada.getText().isEmpty() || txtColor.getText().isEmpty() ||
+	            txtCombustible.getText().isEmpty() || txtKilometraje.getText().isEmpty() ||
+	            txtMarca.getText().isEmpty() || txtModelo.getText().isEmpty() ||
+	            txtMotor.getText().isEmpty() || txtPlaca.getText().isEmpty() ||
+	            txtVin.getText().isEmpty();
 	}
-	public void mouseExited(MouseEvent e) {
+
+	// Método para verificar si la matrícula ya está registrada en la base de datos
+	private boolean matriculaRepetida(String placa) {
+	    List<Vehiculo> listaVehiculos = vehdao.ListarVehiculo();
+	    for (Vehiculo v : listaVehiculos) {
+	        if (v.getPlaca().equals(placa)) {
+	            return true;
+	        }
+	    }
+	    return false;
 	}
-	public void mousePressed(MouseEvent e) {
+		
 	}
-	public void mouseReleased(MouseEvent e) {
-	}
-	protected void mouseClickedTableListaVehiculo(MouseEvent e) {
-		btnModificarVehiculo.setEnabled(true);
-		 btnEliminarVehiculo.setEnabled(true);
-        btnRegistrarVehiculo.setEnabled(false);
-	       
-	        int fila = tableListaVehiculo.rowAtPoint(e.getPoint());
-	       
-	    	txtIdVehiculo.setText(tableListaVehiculo.getValueAt(fila, 0).toString());
-			txtAnio.setText(tableListaVehiculo.getValueAt(fila, 8).toString());
-			txtChasis.setText(tableListaVehiculo.getValueAt(fila, 4).toString());
-			txtCilindrada.setText(tableListaVehiculo.getValueAt(fila, 9).toString());
-			txtColor.setText(tableListaVehiculo.getValueAt(fila, 7).toString());
-			txtCombustible.setText(tableListaVehiculo.getValueAt(fila, 10).toString());
-			txtKilometraje.setText(tableListaVehiculo.getValueAt(fila, 11).toString());
-			txtMarca.setText(tableListaVehiculo.getValueAt(fila, 3).toString());
-			txtModelo.setText(tableListaVehiculo.getValueAt(fila, 2).toString());
-			txtMotor.setText(tableListaVehiculo.getValueAt(fila, 5).toString());
-			txtPlaca.setText(tableListaVehiculo.getValueAt(fila, 1).toString());
-			txtVin.setText(tableListaVehiculo.getValueAt(fila, 6).toString());
-			
-			int stri = (int) tableListaVehiculo.getValueAt(fila, 12);
-			
-			 for (int i = 0; i < cboCliente.getItemCount(); i++) {
-		            String item = (String) cboCliente.getItemAt(i);
-		            if (item != null && item.contains(":")) {
-		                String[] partes = item.split(":");
-		                int numeroEnItem = Integer.parseInt(partes[0].trim());
-		                if (numeroEnItem == stri ) {
-		                    cboCliente.setSelectedIndex(i);
-		                    break;
-		                }
-		            }
-			
-			
-			 }}
-}
+

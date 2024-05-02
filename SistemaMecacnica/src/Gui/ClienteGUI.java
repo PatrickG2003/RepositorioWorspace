@@ -227,15 +227,19 @@ protected void actionPerformedBtnModificarCliente(ActionEvent e) {
 	
 	protected void actionPerformedBtnEliminarCliente(ActionEvent e) {
 		
-		  if (!"".equals(txtId.getText())) {
-	            int pregunta = JOptionPane.showConfirmDialog(null, "Esta seguro de eliminar");
-	            if (pregunta == 0) {
-	                int id = Integer.parseInt(txtId.getText());
-	                clidao.EliminarCliente(id);
-	                LimpiarTable();
-	                LimpiarCliente();
-	                ListarCliente();
-	            } }
+		if (!"".equals(txtId.getText())) {
+		    int pregunta = JOptionPane.showConfirmDialog(null, "¿Está seguro de eliminar?");
+		    if (pregunta == 0) {
+		        int confirmacionBorrarRegistros = JOptionPane.showConfirmDialog(null, "Esta acción eliminará todos los vehiculos  relacionados con este cliente. ¿Desea continuar?");
+		        if (confirmacionBorrarRegistros == 0) {
+		            int id = Integer.parseInt(txtId.getText());
+		            clidao.EliminarCliente(id);
+		            LimpiarTable();
+		            LimpiarCliente();
+		            ListarCliente();
+		        }
+		    }
+		}
 	}
 	
 	protected void actionPerformedBtnLimpiar(ActionEvent e) {

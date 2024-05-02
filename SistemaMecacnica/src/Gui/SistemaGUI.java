@@ -30,6 +30,7 @@ public class SistemaGUI extends JFrame implements ActionListener {
 	private JTabbedPane principal;
 	public String p1 = "0";
 	public String p2 = "0";
+	public String p3 = "0";
 
 	/**
 	 * Launch the application.
@@ -77,7 +78,8 @@ public class SistemaGUI extends JFrame implements ActionListener {
 		btnClientes.setBounds(0, 49, 171, 50);
 		panel_1.add(btnClientes);
 		
-		btnMantenimiento = new JButton("Mantenimiento");
+		btnMantenimiento = new JButton("MANTENIMIENTOS");
+		btnMantenimiento.addActionListener(this);
 		btnMantenimiento.setBounds(0, 97, 171, 50);
 		panel_1.add(btnMantenimiento);
 		
@@ -90,6 +92,9 @@ public class SistemaGUI extends JFrame implements ActionListener {
 		contentPane.add(principal);
 	}
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnMantenimiento) {
+			actionPerformedBtnMantenimiento(e);
+		}
 		if (e.getSource() == btnClientes) {
 			actionPerformedBtnClientes(e);
 		}
@@ -127,4 +132,31 @@ public class SistemaGUI extends JFrame implements ActionListener {
 		p2 = "1";
 		
 	}
+	protected void actionPerformedBtnMantenimiento(ActionEvent e) {
+		p3="0";
+		ServicioGUI s=new ServicioGUI();
+		if(p3.equals( "0")) {
+		principal.addTab("Servicio ", s);
+		principal.setSelectedComponent(s);
+		}else {
+			principal.setSelectedComponent(s);
+		}
+		p3 = "1";
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

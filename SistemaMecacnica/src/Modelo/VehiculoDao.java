@@ -79,6 +79,7 @@ public class VehiculoDao {
 	    
 	    public boolean EliminarVehiculo(int id){
 	        String sql = "DELETE FROM vehiculo WHERE idVehiculo = ?";
+	       
 	        try {
 	            ps = con.prepareStatement(sql);
 	            ps.setInt(1, id);
@@ -130,7 +131,7 @@ public class VehiculoDao {
 	        }
 	    }
 	    
-	    public Cliente Buscarcliente(int dni){
+	    public Cliente BuscarVehiculo(int dni){
 	        Cliente cl = new Cliente();
 	        String sql = "SELECT * FROM cliente WHERE dni = ?";
 	        try {
