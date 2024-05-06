@@ -3,9 +3,7 @@ package Gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
+
 import javax.swing.GroupLayout.Alignment;
 
 public class InformacionVehiculoGUI extends JDialog  {
