@@ -1,6 +1,5 @@
 INDEX VERSION 1.132+F:\COMPUTACION E INFORMATICA\TRABAJOS\.metadata\.plugins\org.eclipse.jdt.core
 4278141842.index
-2528941470.index
 588980373.index
 1239229013.index
 2961047868.index
