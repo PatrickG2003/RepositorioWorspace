@@ -82,7 +82,7 @@ public class ServicioGUI extends JPanel implements ActionListener, ItemListener,
 		add(cboVehiculoC);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(348, 60, 696, 637);
+		scrollPane.setBounds(348, 92, 696, 605);
 		add(scrollPane);
 		
 		tablelistaServicio = new JTable();

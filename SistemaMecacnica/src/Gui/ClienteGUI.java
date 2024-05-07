@@ -58,7 +58,7 @@ public class ClienteGUI extends JPanel implements ActionListener, MouseListener 
 		setLayout(null);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(378, 59, 650, 675);
+		scrollPane.setBounds(378, 85, 650, 649);
 		add(scrollPane);
 		
 		tableListaClientes = new JTable();
@@ -73,7 +73,7 @@ public class ClienteGUI extends JPanel implements ActionListener, MouseListener 
 		scrollPane.setViewportView(tableListaClientes);
 		
 		jpanelRegistroCliente = new JPanel();
-		jpanelRegistroCliente.setBounds(10, 59, 351, 680);
+		jpanelRegistroCliente.setBounds(10, 85, 351, 654);
 		add(jpanelRegistroCliente);
 		jpanelRegistroCliente.setLayout(null);
 		

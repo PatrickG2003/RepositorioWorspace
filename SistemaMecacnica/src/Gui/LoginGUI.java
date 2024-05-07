@@ -50,7 +50,7 @@ public class LoginGUI extends JFrame implements ActionListener, MouseListener, M
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
-	private JLabel label;
+	private JLabel lblMecanica;
 	private JSeparator separator;
 	private JLabel lblNewLabel_5;
 	private JSeparator separator_1;
@@ -161,12 +161,12 @@ public class LoginGUI extends JFrame implements ActionListener, MouseListener, M
 	        contentPane.add(separator);
 	        
 	        
-	        label = new JLabel("New label");
-	        label.setHorizontalAlignment(SwingConstants.CENTER);
-	        label.setForeground(UIManager.getColor("TextPane.selectionForeground"));
-	        label.setFont(new Font("Roboto", Font.BOLD, 24));
-	        label.setBounds(327, 204, 222, 17);
-	        contentPane.add(label);
+	        lblMecanica = new JLabel("Mecanica");
+	        lblMecanica.setHorizontalAlignment(SwingConstants.CENTER);
+	        lblMecanica.setForeground(UIManager.getColor("TextPane.selectionForeground"));
+	        lblMecanica.setFont(new Font("Roboto", Font.BOLD, 24));
+	        lblMecanica.setBounds(327, 204, 222, 17);
+	        contentPane.add(lblMecanica);
 	        
 	        lblNewLabel_4 = new JLabel("");
 	        lblNewLabel_4.setIcon(new ImageIcon(LoginGUI.class.getResource("/Images/logo.png")));
@@ -182,7 +182,7 @@ public class LoginGUI extends JFrame implements ActionListener, MouseListener, M
 	        lblNewLabel_2.setBounds(337, 22, 222, 524);
 	        contentPane.add(lblNewLabel_2);
 	        
-	        lblNewLabel_3 = new JLabel("New label");
+	        lblNewLabel_3 = new JLabel("Mecanica");
 	        lblNewLabel_3.setFont(new Font("Roboto", Font.PLAIN, 24));
 	        lblNewLabel_3.setIcon(new ImageIcon(LoginGUI.class.getResource("/Images/favicon.png")));
 	        lblNewLabel_3.setBounds(26, 35, 190, 68);

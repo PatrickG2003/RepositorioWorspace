@@ -6048,3 +6048,1445 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-05-06 16:14:51.268
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2024-05-06 16:14:51.268
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-05-06 16:14:51.268
+!MESSAGE The project description file (.project) for '.org.eclipse.egit.core.cmp' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-05-06 16:14:52.881
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2024-05-07 16:09:42.916 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=19.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.lsp4e.debug 4 0 2024-05-07 16:09:49.006
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.lsp4e.debug [457]
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.jsonrpc; bundle-version="[0.19.0,0.20.0)"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j.jsonrpc; bundle-version="0.19.0.v20221118-0359"
+       org.eclipse.lsp4j.jsonrpc [256]
+         Unresolved requirement: Import-Package: com.google.gson.reflect; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+              com.google.gson [8]
+         Unresolved requirement: Import-Package: com.google.gson.stream; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.stream; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+         Unresolved requirement: Import-Package: com.google.gson; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+         Unresolved requirement: Import-Package: com.google.gson.annotations; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.annotations; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.debug; bundle-version="[0.19.0,0.20.0)"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j.debug; bundle-version="0.19.0.v20221118-0359"
+       org.eclipse.lsp4j.debug [458]
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib; version="[2.28.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.34.0.v20240227-0940"; version="2.34.0.v20240227-0940"
+              org.eclipse.xtext.xbase.lib [618]
+                No resolution report for the bundle.         Unresolved requirement: Import-Package: com.google.gson; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+         Unresolved requirement: Import-Package: com.google.gson.annotations; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.annotations; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+         Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc; version="[0.19.0,1.0.0)"
+           -> Export-Package: org.eclipse.lsp4j.jsonrpc; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+         Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.debug; version="[0.19.0,1.0.0)"
+           -> Export-Package: org.eclipse.lsp4j.jsonrpc.debug; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc.debug"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.debug.messages,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+              org.eclipse.lsp4j.jsonrpc.debug [459]
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,com.google.gson.reflect,com.google.gson.stream,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.messages; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.messages; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc.validation"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: com.google.gson.stream; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson.stream; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.json; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.json; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.validation; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.validation; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: com.google.gson.reflect; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                Unresolved requirement: Import-Package: com.google.gson.annotations; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson.annotations; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                Unresolved requirement: Import-Package: com.google.gson; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.services; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.services; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.json"
+         Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; version="[0.19.0,1.0.0)"
+           -> Export-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,com.google.gson.reflect,com.google.gson.stream,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+         Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.validation; version="[0.19.0,1.0.0)"
+           -> Export-Package: org.eclipse.lsp4j.jsonrpc.validation; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.messages"
+         Unresolved requirement: Import-Package: com.google.gson.reflect; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+         Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib.util; version="[2.28.0,3.0.0)"
+           -> Export-Package: org.eclipse.xtext.xbase.lib.util; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.34.0.v20240227-0940"; version="2.34.0.v20240227-0940"
+         Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.messages; version="[0.19.0,1.0.0)"
+           -> Export-Package: org.eclipse.lsp4j.jsonrpc.messages; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc.validation"
+         Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.services; version="[0.19.0,1.0.0)"
+           -> Export-Package: org.eclipse.lsp4j.jsonrpc.services; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.json"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.jsonrpc.debug; bundle-version="[0.19.0,0.20.0)"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j.jsonrpc.debug; bundle-version="0.19.0.v20221118-0359"
+  Unresolved requirement: Import-Package: com.google.gson.reflect; version="2.7.0"
+    -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+  Unresolved requirement: Import-Package: com.google.gson
+    -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.lsp4e.debug [osgi.identity; type="osgi.bundle"; version:Version="0.15.0.202211181112"; osgi.identity="org.eclipse.lsp4e.debug"; singleton:="true"] because it is exposed to package 'com.google.gson' from resources com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.10.1"; osgi.identity="com.google.gson"] and com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.9.1.v20220915-1632"; osgi.identity="com.google.gson"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.lsp4e.debug [osgi.identity; type="osgi.bundle"; version:Version="0.15.0.202211181112"; osgi.identity="org.eclipse.lsp4e.debug"; singleton:="true"]
+    import: (osgi.wiring.package=com.google.gson)
+     |
+    export: osgi.wiring.package: com.google.gson
+  com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.10.1"; osgi.identity="com.google.gson"]
+
+Chain 2:
+  org.eclipse.lsp4e.debug [osgi.identity; type="osgi.bundle"; version:Version="0.15.0.202211181112"; osgi.identity="org.eclipse.lsp4e.debug"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.lsp4j.jsonrpc.debug)(&(bundle-version>=0.19.0)(!(bundle-version>=0.20.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="0.19.0.v20221118-0359"; osgi.wiring.bundle="org.eclipse.lsp4j.jsonrpc.debug"
+  org.eclipse.lsp4j.jsonrpc.debug [osgi.identity; type="osgi.bundle"; version:Version="0.19.0.v20221118-0359"; osgi.identity="org.eclipse.lsp4j.jsonrpc.debug"]
+    import: (&(osgi.wiring.package=com.google.gson)(&(version>=2.9.1)(!(version>=2.10.0))))
+     |
+    export: osgi.wiring.package: com.google.gson
+  com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.9.1.v20220915-1632"; osgi.identity="com.google.gson"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.wildwebdeveloper 4 0 2024-05-07 16:09:49.030
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.wildwebdeveloper [460]
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.jsonrpc; bundle-version="0.12.0"
+    -> Bundle-SymbolicName: org.eclipse.lsp4j.jsonrpc; bundle-version="0.19.0.v20221118-0359"
+       org.eclipse.lsp4j.jsonrpc [256]
+         Unresolved requirement: Import-Package: com.google.gson.reflect; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+              com.google.gson [8]
+         Unresolved requirement: Import-Package: com.google.gson.stream; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.stream; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+         Unresolved requirement: Import-Package: com.google.gson; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+         Unresolved requirement: Import-Package: com.google.gson.annotations; version="[2.9.1,2.10.0)"
+           -> Export-Package: com.google.gson.annotations; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+  Unresolved requirement: Require-Bundle: org.eclipse.lsp4e.debug; bundle-version="0.9.0"
+    -> Bundle-SymbolicName: org.eclipse.lsp4e.debug; bundle-version="0.15.0.202211181112"; singleton:="true"
+       org.eclipse.lsp4e.debug [457]
+         Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.jsonrpc; bundle-version="[0.19.0,0.20.0)"
+           -> Bundle-SymbolicName: org.eclipse.lsp4j.jsonrpc; bundle-version="0.19.0.v20221118-0359"
+         Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.debug; bundle-version="[0.19.0,0.20.0)"
+           -> Bundle-SymbolicName: org.eclipse.lsp4j.debug; bundle-version="0.19.0.v20221118-0359"
+              org.eclipse.lsp4j.debug [458]
+                Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib; version="[2.28.0,3.0.0)"
+                  -> Export-Package: org.eclipse.xtext.xbase.lib; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.34.0.v20240227-0940"; version="2.34.0.v20240227-0940"
+                     org.eclipse.xtext.xbase.lib [618]
+                       No resolution report for the bundle.                Unresolved requirement: Import-Package: com.google.gson; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+                Unresolved requirement: Import-Package: com.google.gson.annotations; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson.annotations; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.debug; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.debug; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc.debug"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.debug.messages,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                     org.eclipse.lsp4j.jsonrpc.debug [459]
+                       Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; version="[0.19.0,1.0.0)"
+                         -> Export-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,com.google.gson.reflect,com.google.gson.stream,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                       Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.messages; version="[0.19.0,1.0.0)"
+                         -> Export-Package: org.eclipse.lsp4j.jsonrpc.messages; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc.validation"
+                       Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc; version="[0.19.0,1.0.0)"
+                         -> Export-Package: org.eclipse.lsp4j.jsonrpc; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                       Unresolved requirement: Import-Package: com.google.gson.stream; version="[2.9.1,2.10.0)"
+                         -> Export-Package: com.google.gson.stream; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                       Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.json; version="[0.19.0,1.0.0)"
+                         -> Export-Package: org.eclipse.lsp4j.jsonrpc.json; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.messages"
+                       Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.validation; version="[0.19.0,1.0.0)"
+                         -> Export-Package: org.eclipse.lsp4j.jsonrpc.validation; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.messages"
+                       Unresolved requirement: Import-Package: com.google.gson.reflect; version="[2.9.1,2.10.0)"
+                         -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                       Unresolved requirement: Import-Package: com.google.gson.annotations; version="[2.9.1,2.10.0)"
+                         -> Export-Package: com.google.gson.annotations; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                       Unresolved requirement: Import-Package: com.google.gson; version="[2.9.1,2.10.0)"
+                         -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+                       Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.services; version="[0.19.0,1.0.0)"
+                         -> Export-Package: org.eclipse.lsp4j.jsonrpc.services; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.json"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.json.adapters; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="com.google.gson,com.google.gson.reflect,com.google.gson.stream,org.eclipse.lsp4j.jsonrpc.json,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.validation; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.validation; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.messages"
+                Unresolved requirement: Import-Package: com.google.gson.reflect; version="[2.9.1,2.10.0)"
+                  -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+                Unresolved requirement: Import-Package: org.eclipse.xtext.xbase.lib.util; version="[2.28.0,3.0.0)"
+                  -> Export-Package: org.eclipse.xtext.xbase.lib.util; bundle-symbolic-name="org.eclipse.xtext.xbase.lib"; bundle-version="2.34.0.v20240227-0940"; version="2.34.0.v20240227-0940"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.messages; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.messages; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc.validation"
+                Unresolved requirement: Import-Package: org.eclipse.lsp4j.jsonrpc.services; version="[0.19.0,1.0.0)"
+                  -> Export-Package: org.eclipse.lsp4j.jsonrpc.services; bundle-symbolic-name="org.eclipse.lsp4j.jsonrpc"; bundle-version="0.19.0.v20221118-0359"; version="0.19.0"; uses:="org.eclipse.lsp4j.jsonrpc,org.eclipse.lsp4j.jsonrpc.json"
+         Unresolved requirement: Require-Bundle: org.eclipse.lsp4j.jsonrpc.debug; bundle-version="[0.19.0,0.20.0)"
+           -> Bundle-SymbolicName: org.eclipse.lsp4j.jsonrpc.debug; bundle-version="0.19.0.v20221118-0359"
+         Unresolved requirement: Import-Package: com.google.gson.reflect; version="2.7.0"
+           -> Export-Package: com.google.gson.reflect; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"
+         Unresolved requirement: Import-Package: com.google.gson
+           -> Export-Package: com.google.gson; bundle-symbolic-name="com.google.gson"; bundle-version="2.9.1.v20220915-1632"; version="2.9.1"; uses:="com.google.gson.internal,com.google.gson.reflect,com.google.gson.stream"
+  Unresolved requirement: Require-Bundle: com.google.gson; bundle-version="2.8.2"
+    -> Bundle-SymbolicName: com.google.gson; bundle-version="2.9.1.v20220915-1632"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.lsp4e.debug [osgi.identity; type="osgi.bundle"; version:Version="0.15.0.202211181112"; osgi.identity="org.eclipse.lsp4e.debug"; singleton:="true"] because it is exposed to package 'com.google.gson' from resources com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.10.1"; osgi.identity="com.google.gson"] and com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.9.1.v20220915-1632"; osgi.identity="com.google.gson"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.lsp4e.debug [osgi.identity; type="osgi.bundle"; version:Version="0.15.0.202211181112"; osgi.identity="org.eclipse.lsp4e.debug"; singleton:="true"]
+    import: (osgi.wiring.package=com.google.gson)
+     |
+    export: osgi.wiring.package: com.google.gson
+  com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.10.1"; osgi.identity="com.google.gson"]
+
+Chain 2:
+  org.eclipse.lsp4e.debug [osgi.identity; type="osgi.bundle"; version:Version="0.15.0.202211181112"; osgi.identity="org.eclipse.lsp4e.debug"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.lsp4j.jsonrpc.debug)(&(bundle-version>=0.19.0)(!(bundle-version>=0.20.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="0.19.0.v20221118-0359"; osgi.wiring.bundle="org.eclipse.lsp4j.jsonrpc.debug"
+  org.eclipse.lsp4j.jsonrpc.debug [osgi.identity; type="osgi.bundle"; version:Version="0.19.0.v20221118-0359"; osgi.identity="org.eclipse.lsp4j.jsonrpc.debug"]
+    import: (&(osgi.wiring.package=com.google.gson)(&(version>=2.9.1)(!(version>=2.10.0))))
+     |
+    export: osgi.wiring.package: com.google.gson
+  com.google.gson [osgi.identity; type="osgi.bundle"; version:Version="2.9.1.v20220915-1632"; osgi.identity="com.google.gson"]
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1852)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1845)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1786)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.app 0 0 2024-05-07 16:09:49.532
+!MESSAGE Product org.eclipse.epp.package.java.product could not be found.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-05-07 16:12:25.337
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2024-05-07 16:12:36.576
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-07 16:12:36.576
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-07 16:12:44.088
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Pc'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-05-07 16:12:44.412
+!MESSAGE Error occurred while deleting: /SimpleJavaLoginMD/build/classes/com
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:784)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:140)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:65)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:273)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:188)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete '/SimpleJavaLoginMD/build/classes/com'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:816)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1802)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:771)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:140)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:65)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:273)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:188)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login\Login$1.class.
+java.nio.file.FileSystemException: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login\Login$1.class: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:275)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:222)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:250)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:250)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:139)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:156)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:119)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:816)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1802)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:771)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:140)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:65)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:273)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:188)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login.
+Contains: Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2024-05-07 16:12:44.414
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2024-05-07 16:12:44.414
+!MESSAGE Could not delete '/SimpleJavaLoginMD/build/classes/com'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:816)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1802)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:771)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:140)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:65)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:273)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:188)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login\Login$1.class.
+java.nio.file.FileSystemException: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login\Login$1.class: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:275)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:222)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:250)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:250)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:139)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:156)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:119)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:816)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1802)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:771)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:140)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:65)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:273)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:188)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login.
+Contains: Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2024-05-07 16:12:44.414
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2024-05-07 16:12:44.414
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2024-05-07 16:12:44.414
+!MESSAGE Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login\Login$1.class.
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login\Login$1.class: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:275)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:222)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:250)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:250)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:139)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:156)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:119)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:364)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:816)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1802)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:771)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:140)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:65)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:273)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:188)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2024-05-07 16:12:44.415
+!MESSAGE Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com\login.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2024-05-07 16:12:44.415
+!MESSAGE Could not delete: C:\Users\Pc\git\SimpleJavaLoginMD\build\classes\com.
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2024-05-07 16:12:52.769
+!MESSAGE Setup tasks were performed during startup updating 6 preferences. See 'C:\Users\Pc\java-2023-03\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-05-07 16:54:11.712
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package Gui;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTabbedPane;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
+import java.awt.CardLayout;
+import java.awt.GridLayout;
+import java.awt.Color;
+import javax.swing.UIManager;
+import java.awt.SystemColor;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.Insets;
+import java.awt.ComponentOrientation;
+import java.awt.Component;
+import javax.swing.JLabel;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+public class SistemaGUI extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JPanel panel;
+	private final JPanel panel_1 = new JPanel();
+	private JButton btnVehiculos;
+	private JButton btnClientes;
+	private JButton btnMantenimiento;
+	private JTabbedPane principal;
+	public String p1 = "0";
+	public String p2 = "0";
+	public String p3 = "0";
+	private JButton btnProductos;
+	private JLabel lblNewLabel;
+	private JLabel lblFecha;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		
+		FlatAtomOneLightIJTheme.setup();
+
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SistemaGUI frame = new SistemaGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SistemaGUI() {
+		
+		Date fechaActual = new Date();
+        
+        SimpleDateFormat formato = new SimpleDateFormat("EEEE, dd 'de' MMMM 'de' yyyy");
+        
+        String fechaEnPalabras = formato.format(fechaActual);
+        
+      ("La fecha de hoy es: " + fechaEnPalabras);
+		
+		
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1323, 898);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		panel = new JPanel();
+		panel.setBackground(UIManager.getColor("ToggleButton.highlight"));
+		panel.setBounds(260, 0, 1053, 107);
+		panel.setBackground(new Color(25, 118, 211));
+
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		lblFecha = new JLabel("New label");
+		lblFecha.setBounds(258, 33, 566, 46);
+		panel.add(lblFecha);
+		panel_1.setBackground(new Color(51, 0, 153));
+		panel_1.setBounds(0, 0, 260, 859);
+		contentPane.add(panel_1);
+		
+		btnVehiculos = new JButton("Vehiculos");
+		btnVehiculos.setForeground(new Color(255, 255, 255));
+		btnVehiculos.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnVehiculos.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/coche.png")));
+		btnVehiculos.setBorder(null);
+		btnVehiculos.addActionListener(this);
+		btnVehiculos.setBounds(0, 158, 260, 50);
+		btnVehiculos.setBackground(new Color(22,101,193));
+
+		panel_1.setLayout(null);
+		panel_1.add(btnVehiculos);
+		
+		btnClientes = new JButton("Clientes");
+		btnClientes.setAlignmentY(Component.TOP_ALIGNMENT);
+		btnClientes.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+		btnClientes.setVerticalTextPosition(SwingConstants.TOP);
+		btnClientes.setMargin(new Insets(2, 63, 2, 14));
+		btnClientes.setFont(new Font("Roboto Black", Font.BOLD, 19));
+		btnClientes.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/usuario1.png")));
+		btnClientes.setForeground(new Color(255, 255, 255));
+		btnClientes.setBorder(null);
+		btnClientes.addActionListener(this);
+		btnClientes.setBounds(0, 108, 260, 50);
+		btnClientes.setBackground(new Color(22,101,193));
+
+		panel_1.add(btnClientes);
+		
+		btnMantenimiento = new JButton("Mantenimientos");
+		btnMantenimiento.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/herramientas.png")));
+		btnMantenimiento.setForeground(new Color(255, 255, 255));
+		btnMantenimiento.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnMantenimiento.setBorder(null);
+		btnMantenimiento.setBackground(new Color(22,101,193));
+		btnMantenimiento.addActionListener(this);
+		btnMantenimiento.setBounds(0, 208, 260, 50);
+		panel_1.add(btnMantenimiento);
+		
+		principal = new JTabbedPane(JTabbedPane.TOP);
+		principal.setBounds(300, 11, 1054, 832);
+		contentPane.add(principal);
+		
+		
+		panel_1.setBackground(new Color(14,71,161));
+		
+		btnProductos = new JButton("Productos");
+		btnProductos.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/caja-abierta-llena.png")));
+		btnProductos.setForeground(Color.WHITE);
+		btnProductos.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnProductos.setBorder(null);
+		btnProductos.setBackground(new Color(22, 101, 193));
+		btnProductos.setBounds(0, 256, 260, 50);
+		panel_1.add(btnProductos);
+		
+		lblNewLabel = new JLabel("Mecanica");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/favicon.png")));
+		lblNewLabel.setFont(new Font("Roboto Black", Font.BOLD, 24));
+		lblNewLabel.setBounds(31, 24, 190, 68);
+		panel_1.add(lblNewLabel);
+
+		
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnMantenimiento) {
+			actionPerformedBtnMantenimiento(e);
+		}
+		if (e.getSource() == btnClientes) {
+			actionPerformedBtnClientes(e);
+		}
+		if (e.getSource() == btnVehiculos) {
+			actionPerformedBtnVehiculos(e);
+		}
+	}
+	protected void actionPerformedBtnVehiculos(ActionEvent e) {
+		p1="0";
+		VehiculoGUI v=new VehiculoGUI();
+		if(p1.equals( "0")) {
+		principal.addTab("Vehiculo ", v);
+		principal.setSelectedComponent(v);
+		}else {
+			principal.setSelectedComponent(v);
+		}
+		p1 = "1";
+
+		
+	}
+	
+	
+	
+	protected void actionPerformedBtnClientes(ActionEvent e) {
+		p2="0";
+
+		ClienteGUI c=new ClienteGUI();
+		if(p2.equals( "0")) {
+		principal.addTab("Vehiculo ", c);
+		principal.setSelectedComponent(c);
+		}else {
+			principal.setSelectedComponent(c);
+
+		}
+		p2 = "1";
+		
+	}
+	protected void actionPerformedBtnMantenimiento(ActionEvent e) {
+		p3="0";
+		ServicioGUI s=new ServicioGUI();
+		if(p3.equals( "0")) {
+		principal.addTab("Servicio ", s);
+		principal.setSelectedComponent(s);
+		}else {
+			principal.setSelectedComponent(s);
+		}
+		p3 = "1";
+		
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-05-07 16:54:11.712
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-05-07 16:54:11.712
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-05-07 16:54:12.357
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package Gui;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTabbedPane;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
+import java.awt.CardLayout;
+import java.awt.GridLayout;
+import java.awt.Color;
+import javax.swing.UIManager;
+import java.awt.SystemColor;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.Insets;
+import java.awt.ComponentOrientation;
+import java.awt.Component;
+import javax.swing.JLabel;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+public class SistemaGUI extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JPanel panel;
+	private final JPanel panel_1 = new JPanel();
+	private JButton btnVehiculos;
+	private JButton btnClientes;
+	private JButton btnMantenimiento;
+	private JTabbedPane principal;
+	public String p1 = "0";
+	public String p2 = "0";
+	public String p3 = "0";
+	private JButton btnProductos;
+	private JLabel lblNewLabel;
+	private JLabel lblFecha;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		
+		FlatAtomOneLightIJTheme.setup();
+
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SistemaGUI frame = new SistemaGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SistemaGUI() {
+		
+		Date fechaActual = new Date();
+        
+        SimpleDateFormat formato = new SimpleDateFormat("EEEE, dd 'de' MMMM 'de' yyyy");
+        
+        String fechaEnPalabras = formato.format(fechaActual);
+        
+        ("La fecha de hoy es: " + fechaEnPalabras);
+		
+		
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1323, 898);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		panel = new JPanel();
+		panel.setBackground(UIManager.getColor("ToggleButton.highlight"));
+		panel.setBounds(260, 0, 1053, 107);
+		panel.setBackground(new Color(25, 118, 211));
+
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		lblFecha = new JLabel("New label");
+		lblFecha.setBounds(258, 33, 566, 46);
+		panel.add(lblFecha);
+		panel_1.setBackground(new Color(51, 0, 153));
+		panel_1.setBounds(0, 0, 260, 859);
+		contentPane.add(panel_1);
+		
+		btnVehiculos = new JButton("Vehiculos");
+		btnVehiculos.setForeground(new Color(255, 255, 255));
+		btnVehiculos.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnVehiculos.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/coche.png")));
+		btnVehiculos.setBorder(null);
+		btnVehiculos.addActionListener(this);
+		btnVehiculos.setBounds(0, 158, 260, 50);
+		btnVehiculos.setBackground(new Color(22,101,193));
+
+		panel_1.setLayout(null);
+		panel_1.add(btnVehiculos);
+		
+		btnClientes = new JButton("Clientes");
+		btnClientes.setAlignmentY(Component.TOP_ALIGNMENT);
+		btnClientes.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+		btnClientes.setVerticalTextPosition(SwingConstants.TOP);
+		btnClientes.setMargin(new Insets(2, 63, 2, 14));
+		btnClientes.setFont(new Font("Roboto Black", Font.BOLD, 19));
+		btnClientes.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/usuario1.png")));
+		btnClientes.setForeground(new Color(255, 255, 255));
+		btnClientes.setBorder(null);
+		btnClientes.addActionListener(this);
+		btnClientes.setBounds(0, 108, 260, 50);
+		btnClientes.setBackground(new Color(22,101,193));
+
+		panel_1.add(btnClientes);
+		
+		btnMantenimiento = new JButton("Mantenimientos");
+		btnMantenimiento.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/herramientas.png")));
+		btnMantenimiento.setForeground(new Color(255, 255, 255));
+		btnMantenimiento.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnMantenimiento.setBorder(null);
+		btnMantenimiento.setBackground(new Color(22,101,193));
+		btnMantenimiento.addActionListener(this);
+		btnMantenimiento.setBounds(0, 208, 260, 50);
+		panel_1.add(btnMantenimiento);
+		
+		principal = new JTabbedPane(JTabbedPane.TOP);
+		principal.setBounds(300, 11, 1054, 832);
+		contentPane.add(principal);
+		
+		
+		panel_1.setBackground(new Color(14,71,161));
+		
+		btnProductos = new JButton("Productos");
+		btnProductos.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/caja-abierta-llena.png")));
+		btnProductos.setForeground(Color.WHITE);
+		btnProductos.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnProductos.setBorder(null);
+		btnProductos.setBackground(new Color(22, 101, 193));
+		btnProductos.setBounds(0, 256, 260, 50);
+		panel_1.add(btnProductos);
+		
+		lblNewLabel = new JLabel("Mecanica");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/favicon.png")));
+		lblNewLabel.setFont(new Font("Roboto Black", Font.BOLD, 24));
+		lblNewLabel.setBounds(31, 24, 190, 68);
+		panel_1.add(lblNewLabel);
+
+		
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnMantenimiento) {
+			actionPerformedBtnMantenimiento(e);
+		}
+		if (e.getSource() == btnClientes) {
+			actionPerformedBtnClientes(e);
+		}
+		if (e.getSource() == btnVehiculos) {
+			actionPerformedBtnVehiculos(e);
+		}
+	}
+	protected void actionPerformedBtnVehiculos(ActionEvent e) {
+		p1="0";
+		VehiculoGUI v=new VehiculoGUI();
+		if(p1.equals( "0")) {
+		principal.addTab("Vehiculo ", v);
+		principal.setSelectedComponent(v);
+		}else {
+			principal.setSelectedComponent(v);
+		}
+		p1 = "1";
+
+		
+	}
+	
+	
+	
+	protected void actionPerformedBtnClientes(ActionEvent e) {
+		p2="0";
+
+		ClienteGUI c=new ClienteGUI();
+		if(p2.equals( "0")) {
+		principal.addTab("Vehiculo ", c);
+		principal.setSelectedComponent(c);
+		}else {
+			principal.setSelectedComponent(c);
+
+		}
+		p2 = "1";
+		
+	}
+	protected void actionPerformedBtnMantenimiento(ActionEvent e) {
+		p3="0";
+		ServicioGUI s=new ServicioGUI();
+		if(p3.equals( "0")) {
+		principal.addTab("Servicio ", s);
+		principal.setSelectedComponent(s);
+		}else {
+			principal.setSelectedComponent(s);
+		}
+		p3 = "1";
+		
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-05-07 16:54:12.357
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-05-07 16:54:12.358
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:561)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1148)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-05-07 16:54:12.825
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package Gui;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTabbedPane;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
+import java.awt.CardLayout;
+import java.awt.GridLayout;
+import java.awt.Color;
+import javax.swing.UIManager;
+import java.awt.SystemColor;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.Insets;
+import java.awt.ComponentOrientation;
+import java.awt.Component;
+import javax.swing.JLabel;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+public class SistemaGUI extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JPanel panel;
+	private final JPanel panel_1 = new JPanel();
+	private JButton btnVehiculos;
+	private JButton btnClientes;
+	private JButton btnMantenimiento;
+	private JTabbedPane principal;
+	public String p1 = "0";
+	public String p2 = "0";
+	public String p3 = "0";
+	private JButton btnProductos;
+	private JLabel lblNewLabel;
+	private JLabel lblFecha;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		
+		FlatAtomOneLightIJTheme.setup();
+
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SistemaGUI frame = new SistemaGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public SistemaGUI() {
+		
+		Date fechaActual = new Date();
+        
+        SimpleDateFormat formato = new SimpleDateFormat("EEEE, dd 'de' MMMM 'de' yyyy");
+        
+        String fechaEnPalabras = formato.format(fechaActual);
+        
+        ("La fecha de hoy es: " + fechaEnPalabras);
+		
+		
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1323, 898);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		panel = new JPanel();
+		panel.setBackground(UIManager.getColor("ToggleButton.highlight"));
+		panel.setBounds(260, 0, 1053, 107);
+		panel.setBackground(new Color(25, 118, 211));
+
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		lblFecha = new JLabel("New label");
+		lblFecha.setBounds(258, 33, 566, 46);
+		panel.add(lblFecha);
+		panel_1.setBackground(new Color(51, 0, 153));
+		panel_1.setBounds(0, 0, 260, 859);
+		contentPane.add(panel_1);
+		
+		btnVehiculos = new JButton("Vehiculos");
+		btnVehiculos.setForeground(new Color(255, 255, 255));
+		btnVehiculos.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnVehiculos.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/coche.png")));
+		btnVehiculos.setBorder(null);
+		btnVehiculos.addActionListener(this);
+		btnVehiculos.setBounds(0, 158, 260, 50);
+		btnVehiculos.setBackground(new Color(22,101,193));
+
+		panel_1.setLayout(null);
+		panel_1.add(btnVehiculos);
+		
+		btnClientes = new JButton("Clientes");
+		btnClientes.setAlignmentY(Component.TOP_ALIGNMENT);
+		btnClientes.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+		btnClientes.setVerticalTextPosition(SwingConstants.TOP);
+		btnClientes.setMargin(new Insets(2, 63, 2, 14));
+		btnClientes.setFont(new Font("Roboto Black", Font.BOLD, 19));
+		btnClientes.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/usuario1.png")));
+		btnClientes.setForeground(new Color(255, 255, 255));
+		btnClientes.setBorder(null);
+		btnClientes.addActionListener(this);
+		btnClientes.setBounds(0, 108, 260, 50);
+		btnClientes.setBackground(new Color(22,101,193));
+
+		panel_1.add(btnClientes);
+		
+		btnMantenimiento = new JButton("Mantenimientos");
+		btnMantenimiento.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/herramientas.png")));
+		btnMantenimiento.setForeground(new Color(255, 255, 255));
+		btnMantenimiento.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnMantenimiento.setBorder(null);
+		btnMantenimiento.setBackground(new Color(22,101,193));
+		btnMantenimiento.addActionListener(this);
+		btnMantenimiento.setBounds(0, 208, 260, 50);
+		panel_1.add(btnMantenimiento);
+		
+		principal = new JTabbedPane(JTabbedPane.TOP);
+		principal.setBounds(300, 11, 1054, 832);
+		contentPane.add(principal);
+		
+		
+		panel_1.setBackground(new Color(14,71,161));
+		
+		btnProductos = new JButton("Productos");
+		btnProductos.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/caja-abierta-llena.png")));
+		btnProductos.setForeground(Color.WHITE);
+		btnProductos.setFont(new Font("Roboto Black", Font.PLAIN, 19));
+		btnProductos.setBorder(null);
+		btnProductos.setBackground(new Color(22, 101, 193));
+		btnProductos.setBounds(0, 256, 260, 50);
+		panel_1.add(btnProductos);
+		
+		lblNewLabel = new JLabel("Mecanica");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setIcon(new ImageIcon(SistemaGUI.class.getResource("/Images/favicon.png")));
+		lblNewLabel.setFont(new Font("Roboto Black", Font.BOLD, 24));
+		lblNewLabel.setBounds(31, 24, 190, 68);
+		panel_1.add(lblNewLabel);
+
+		
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnMantenimiento) {
+			actionPerformedBtnMantenimiento(e);
+		}
+		if (e.getSource() == btnClientes) {
+			actionPerformedBtnClientes(e);
+		}
+		if (e.getSource() == btnVehiculos) {
+			actionPerformedBtnVehiculos(e);
+		}
+	}
+	protected void actionPerformedBtnVehiculos(ActionEvent e) {
+		p1="0";
+		VehiculoGUI v=new VehiculoGUI();
+		if(p1.equals( "0")) {
+		principal.addTab("Vehiculo ", v);
+		principal.setSelectedComponent(v);
+		}else {
+			principal.setSelectedComponent(v);
+		}
+		p1 = "1";
+
+		
+	}
+	
+	
+	
+	protected void actionPerformedBtnClientes(ActionEvent e) {
+		p2="0";
+
+		ClienteGUI c=new ClienteGUI();
+		if(p2.equals( "0")) {
+		principal.addTab("Vehiculo ", c);
+		principal.setSelectedComponent(c);
+		}else {
+			principal.setSelectedComponent(c);
+
+		}
+		p2 = "1";
+		
+	}
+	protected void actionPerformedBtnMantenimiento(ActionEvent e) {
+		p3="0";
+		ServicioGUI s=new ServicioGUI();
+		if(p3.equals( "0")) {
+		principal.addTab("Servicio ", s);
+		principal.setSelectedComponent(s);
+		}else {
+			principal.setSelectedComponent(s);
+		}
+		p3 = "1";
+		
+	}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2024-05-07 16:54:12.826
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2024-05-07 16:54:12.826
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3882)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3124)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3419)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

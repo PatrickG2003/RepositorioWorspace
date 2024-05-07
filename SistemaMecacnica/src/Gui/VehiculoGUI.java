@@ -201,7 +201,7 @@ public class VehiculoGUI extends JPanel implements ActionListener, MouseListener
 		add(btnLimpiarVehiculo);
 
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(471, 63, 573, 710);
+		scrollPane.setBounds(471, 91, 573, 682);
 		add(scrollPane);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
